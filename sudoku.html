@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>✔ Sudoku Samurai ✔</title>
+
+        <link rel="icon" href="iconSudoku.jpeg">
+        <link rel="stylesheet" href="style.css">
+        <script src="sudoku.js"></script>
+        <script src="interfaz.js"></script>
+
+    </head>
+
+    <body>
+        <h1> Sudoku Samurai </h1>
+
+        <div class="Sudoku" id="boardTopLeft"></div>       
+        <div class="Sudoku" id="boardTopRight"></div>
+        <div class="Sudoku" id="boardBottLeft"></div>       
+        <div class="Sudoku" id="boardBottRight"></div>
+        <div class="Sudoku" id="boardCenter"></div>
+
+
+        <div id="botones">
+            <button class="boton" id="generar"    onclick="generarTableros()">Generar tablero</button>
+            <button class="boton" id="resolvA"    onclick="resolverAStar()">Resolución por A**</button>
+            <button class="boton" id="resolvBack" onclick="resolverBacktracking()">Resolución por Backtracking</button>
+            <button class="boton" id="limpiar"    onclick="limpiarSudoku()">Limpiar sudoku</button>
+            <button class="boton" id="verificaNum"onclick="compruebaSudoku()">Comprobar Sudoku</button>
+        </div>
+
+        <div id="mensaje-error" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: red; color: white; padding: 10px;">
+            Algunos numeros no estan bien colocados, por favor revisa de nuevo.
+            <button onclick="cerrarVentanaError()">Cerrar</button>
+        </div>
+
+    </body>
+
+</html>
